@@ -1,6 +1,11 @@
 
-const getName = () => {
-    return "Barack Obama";
+const getNames = (request, response) => {
+    console.log(request);
+    response.json(["Barack Obama", "Joe Momma", "Jackson Chan"]);
 };
 
-module.exports = { getName };
+const hello = (request, response) => {
+    response.send("Hello world!");
+}
+
+module.exports = { getNames, hello };

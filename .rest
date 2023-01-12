@@ -1,0 +1,8 @@
+GET http://localhost:3000/
+Accept: application/text
+
+###
+GET http://localhost:3000/names
+Accept: application/json
+
+###
