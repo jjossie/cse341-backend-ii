@@ -1,3 +1,10 @@
+POST http://localhost:80/api/item
+Content-Type: application/json
+
+{}
+
+###
+### Get base URL
 GET http://localhost:3000/
 Accept: application/text
 
