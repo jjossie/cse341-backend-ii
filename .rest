@@ -1,15 +1,4 @@
-POST http://localhost:80/api/item
-Content-Type: application/json
-
-{}
-
-###
-### Get base URL
-GET http://localhost:3000/
-Accept: application/text
-
-###
-GET http://localhost:3000/names
+GET http://localhost:3341/contacts
 Accept: application/json
 
 ###
