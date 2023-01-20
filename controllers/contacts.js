@@ -1,4 +1,7 @@
-const { getDb, ObjectId } = require('../db');
+const {
+  getDb,
+  ObjectId
+} = require('../db');
 
 async function getAllContacts() {
   return getDb().db('contacts-cse341').collection('contacts').find().toArray();
@@ -11,4 +14,7 @@ async function getContactById(contactId) {
   });
 }
 
-module.exports = { getAllContacts, getContactById };
+module.exports = {
+  getAllContacts,
+  getContactById
+};

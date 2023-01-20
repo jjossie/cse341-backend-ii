@@ -1,9 +1,24 @@
+//*******************
+// Local Endpoints
+//*******************
+
+### Get all contacts
 GET http://localhost:3341/contacts
 Accept: application/json
 
-###
-
+### Get Kent
 GET http://localhost:3341/contacts/63c6bf4f02cdf06be69ff55f
 Accept: application/json
+
+
+//*******************
+// Render Endpoints
+//*******************
+
+### Get all contacts
+GET https://cse341-backend-ii-8q4z.onrender.com/contacts
+
+### Get Kent
+GET https://cse341-backend-ii-8q4z.onrender.com/contacts/63c6bf4f02cdf06be69ff55f
 
 ###
