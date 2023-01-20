@@ -1,22 +1,14 @@
-const mongoDB = require('../db');
+const { getDb, ObjectId } = require('../db');
 
 async function getAllContacts() {
-  return mongoDB.getDb()
-    .db('contacts-cse341')
-    .collection('contacts')
-    .find()
-    .toArray();
+  return getDb().db('contacts-cse341').collection('contacts').find().toArray();
 }
 
-async function getContactById(id) {
-  return mongoDB
-    .getDb()
-    .db('contacts-cse341')
-    .collection('contacts')
-    .find({
-      _id: id
-    })
-    .toArray();
+async function getContactById(contactId) {
+  const objId = new ObjectId(contactId);
+  return getDb().db('contacts-cse341').collection('contacts').findOne({
+    _id: objId
+  });
 }
 
 module.exports = { getAllContacts, getContactById };

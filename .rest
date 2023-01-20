@@ -2,3 +2,8 @@ GET http://localhost:3341/contacts
 Accept: application/json
 
 ###
+
+GET http://localhost:3341/contacts/63c6bf4f02cdf06be69ff55f
+Accept: application/json
+
+###

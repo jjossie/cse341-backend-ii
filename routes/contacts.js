@@ -2,14 +2,25 @@ const routes = require('express').Router();
 
 const { getAllContacts, getContactById } = require('../controllers/contacts');
 
-routes.get("/", (req, res) => {
+routes.get('/', (req, res) => {
   // res.json(getAllContacts());
   getAllContacts()
-    .then(data => {
+    .then((data) => {
       res.status(200).json(data);
     })
-    .catch(err => {
-      res.sendStatus(400);
+    .catch((err) => {
+      res.status(400).json(err);
+    });
+});
+
+// eslint-disable-next-line no-unused-vars
+routes.get('/:contactId', (req, res) => {
+  getContactById(req.params.contactId)
+    .then((data) => {
+      res.status(200).json(data);
+    })
+    .catch((err) => {
+      res.status(400).json(err);
     });
 });
 
