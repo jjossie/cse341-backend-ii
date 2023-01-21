@@ -1,3 +1,5 @@
+
+###
 //*******************
 // Local Endpoints
 //*******************
@@ -11,6 +13,35 @@ GET http://localhost:3341/contacts/63c6bf4f02cdf06be69ff55f
 Accept: application/json
 
 
+### Create new contact
+POST http://localhost:3341/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Josh",
+  "lastName": "Allen",
+  "email": "joshallen@gmail.com",
+  "favColor": "blue",
+  "birthday": "1995-05-22T07:00:00.000Z"
+}
+
+### Update a contact
+PUT http://localhost:3341/contacts/63cb3e39ca010792ec377216
+Content-Type: application/json
+Accept: application/json
+
+{
+  "firstName": "Josh",
+  "lastName": "Allen",
+  "email": "joshallen@gmail.com",
+  "favColor": "blue",
+  "birthday": "1995-05-22T07:00:00.000Z"
+}
+
+### Delete Josh Allen
+DELETE http://localhost:3341/contacts/63cb3e39ca010792ec377216
+Accept: application/json
+
 //*******************
 // Render Endpoints
 //*******************
@@ -21,4 +52,32 @@ GET https://cse341-backend-ii-8q4z.onrender.com/contacts
 ### Get Kent
 GET https://cse341-backend-ii-8q4z.onrender.com/contacts/63c6bf4f02cdf06be69ff55f
 
-###
+
+### Create new contact
+POST https://cse341-backend-ii-8q4z.onrender.com/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Josh",
+  "lastName": "Allen",
+  "email": "joshallen@gmail.com",
+  "favColor": "red",
+  "birthday": "1995-05-22T07:00:00.000Z"
+}
+
+### Update a contact
+PUT https://cse341-backend-ii-8q4z.onrender.com/contacts/63cb3e39ca010792ec377216
+Content-Type: application/json
+Accept: application/json
+
+{
+  "firstName": "Josh",
+  "lastName": "Allen",
+  "email": "joshallen@gmail.com",
+  "favColor": "blue",
+  "birthday": "1995-05-22T07:00:00.000Z"
+}
+
+### Delete Josh Allen
+DELETE https://cse341-backend-ii-8q4z.onrender.com/contacts/63cb3e39ca010792ec377216
+Accept: application/json

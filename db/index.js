@@ -23,9 +23,9 @@ const initDb = (callback) => {
   }
 };
 
-const getDb = () => {
-  if (_db) return _db;
+const getCollection = () => {
+  if (_db) return _db.db('contacts-cse341').collection('contacts');
   else throw Error('Database not initialized');
 };
 
-module.exports = { initDb, getDb, ObjectId };
+module.exports = { initDb, getCollection, ObjectId };
