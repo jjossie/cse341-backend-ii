@@ -49,7 +49,7 @@ routes.put('/:contactId', (req, res) => {
   if (updatedContact && contactId) {
     updateContact(contactId, updatedContact)
       .then(() => {
-        res.status(204);
+        res.sendStatus(204);
       })
       .catch((err) => {
         res.status(400).json(err);

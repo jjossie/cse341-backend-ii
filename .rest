@@ -28,7 +28,6 @@ Content-Type: application/json
 ### Update a contact
 PUT http://localhost:3341/contacts/63cb3e39ca010792ec377216
 Content-Type: application/json
-Accept: application/json
 
 {
   "firstName": "Josh",
@@ -49,8 +48,8 @@ Accept: application/json
 ### Get all contacts
 GET https://cse341-backend-ii-8q4z.onrender.com/contacts
 
-### Get Kent
-GET https://cse341-backend-ii-8q4z.onrender.com/contacts/63c6bf4f02cdf06be69ff55f
+### Get One Contact
+GET https://cse341-backend-ii-8q4z.onrender.com/contacts/63cb5205de5c17172f2aab1e
 
 
 ### Create new contact
@@ -66,18 +65,13 @@ Content-Type: application/json
 }
 
 ### Update a contact
-PUT https://cse341-backend-ii-8q4z.onrender.com/contacts/63cb3e39ca010792ec377216
+PUT https://cse341-backend-ii-8q4z.onrender.com/contacts/63cb5205de5c17172f2aab1e
 Content-Type: application/json
-Accept: application/json
 
 {
-  "firstName": "Josh",
-  "lastName": "Allen",
-  "email": "joshallen@gmail.com",
-  "favColor": "blue",
-  "birthday": "1995-05-22T07:00:00.000Z"
+
 }
 
 ### Delete Josh Allen
-DELETE https://cse341-backend-ii-8q4z.onrender.com/contacts/63cb3e39ca010792ec377216
+DELETE https://cse341-backend-ii-8q4z.onrender.com/contacts/63cb5205de5c17172f2aab1e
 Accept: application/json
