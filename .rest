@@ -49,7 +49,7 @@ Accept: application/json
 GET https://cse341-backend-ii-8q4z.onrender.com/contacts
 
 ### Get One Contact
-GET https://cse341-backend-ii-8q4z.onrender.com/contacts/63cb5205de5c17172f2aab1e
+GET https://cse341-backend-ii-8q4z.onrender.com/contacts/63cb5b0cc79b86f71432b382
 
 
 ### Create new contact
@@ -65,13 +65,17 @@ Content-Type: application/json
 }
 
 ### Update a contact
-PUT https://cse341-backend-ii-8q4z.onrender.com/contacts/63cb5205de5c17172f2aab1e
+PUT https://cse341-backend-ii-8q4z.onrender.com/contacts/63cb5b0cc79b86f71432b382
 Content-Type: application/json
 
 {
-
+  "firstName": "Josh",
+  "lastName": "Allen",
+  "email": "joshallen@gmail.com",
+  "favColor": "blue",
+  "birthday": "1995-05-22T07:00:00.000Z"
 }
 
 ### Delete Josh Allen
-DELETE https://cse341-backend-ii-8q4z.onrender.com/contacts/63cb5205de5c17172f2aab1e
+DELETE https://cse341-backend-ii-8q4z.onrender.com/contacts/63cb5b0cc79b86f71432b382
 Accept: application/json

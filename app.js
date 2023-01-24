@@ -1,10 +1,13 @@
 // Set up Express
 let express = require('express');
+let cors = require('cors');
 let app = express();
 
 // Middlewares / Routes
 app.use(express.json());
 app.use('/', require('./routes'));
+app.use(cors());
+
 
 // Modules
 let db = require('./db');
