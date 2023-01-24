@@ -18,7 +18,7 @@ async function createContact(contact) {
   if (!(contact.firstName &&
     contact.lastName &&
     contact.email &&
-    contact.favColor &&
+    contact.favoriteColor &&
     contact.birthday)) {
     throw Error('Missing required contact info.');
   }
