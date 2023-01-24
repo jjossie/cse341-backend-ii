@@ -49,7 +49,7 @@ Accept: application/json
 GET https://cse341-backend-ii-8q4z.onrender.com/contacts
 
 ### Get One Contact
-GET https://cse341-backend-ii-8q4z.onrender.com/contacts/63cb5b0cc79b86f71432b382
+GET https://cse341-backend-ii-8q4z.onrender.com/contacts/63c6bc5802cdf06be69ff55d
 
 
 ### Create new contact
