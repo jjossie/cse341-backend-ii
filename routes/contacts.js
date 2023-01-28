@@ -82,7 +82,7 @@ routes.put('/:contactId', (req, res) => {
 
 routes.delete('/:contactId', (req, res) => {
   /* #swagger.responses[200] = {
-    description: 'Get One Contact by ID',
+    description: 'Contact successfully deleted',
     schema: { $ref: '#/definitions/Contact' }
 } */
   const contactId = req.params.contactId;
