@@ -1,7 +1,7 @@
 const swaggerAutogen = require('swagger-autogen')();
 
 require('dotenv').config();
-const port = process.env.PORT;
+// const port = process.env.PORT;
 
 const doc = {
   info: {
@@ -27,7 +27,7 @@ const doc = {
       $id: "63d20dd963418602409e98f4"
     }
   },
-  host: 'localhost:' + port + '',
+  host: 'https://cse341-backend-ii-8q4z.onrender.com',
   schemes: ['http']
 };
 

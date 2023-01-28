@@ -57,9 +57,9 @@ POST https://cse341-backend-ii-8q4z.onrender.com/contacts
 Content-Type: application/json
 
 {
-  "firstName": "Josh",
-  "lastName": "Allen",
-  "email": "joshallen@gmail.com",
+  "firstName": "Brock",
+  "lastName": "Purdy",
+  "email": "hespurdygood@gmail.com",
   "favoriteColor": "red",
   "birthday": "1995-05-22T07:00:00.000Z"
 }
