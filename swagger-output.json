@@ -118,7 +118,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Get One Contact by ID",
+            "schema": {
+              "$ref": "#/definitions/Contact"
+            }
           },
           "400": {
             "description": "Bad Request"
