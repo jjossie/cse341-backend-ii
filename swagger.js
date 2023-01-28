@@ -27,7 +27,7 @@ const doc = {
       $id: "63d20dd963418602409e98f4"
     }
   },
-  host: 'https://cse341-backend-ii-8q4z.onrender.com',
+  host: 'cse341-backend-ii-8q4z.onrender.com',
   schemes: ['http']
 };
 
