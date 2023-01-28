@@ -22,7 +22,10 @@ const doc = {
       $email: "joshallen@gmail.com",
       $favoriteColor: "blue",
       $birthday: "1995-05-22T07:00:00.000Z"
-    }]
+    }],
+    ContactId: {
+      $id: "63d20dd963418602409e98f4"
+    }
   },
   host: 'localhost:' + port + '',
   schemes: ['http']

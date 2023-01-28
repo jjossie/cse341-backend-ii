@@ -43,6 +43,7 @@ routes.post('/', (req, res) => {
     in: 'body',
     description: 'Create a new contact',
     schema: { $ref: '#/definitions/Contact' }
+    }
    #swagger.responses[201] = {
     description: 'Created successfully'
 } */
