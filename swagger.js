@@ -28,7 +28,7 @@ const doc = {
     }
   },
   host: 'cse341-backend-ii-8q4z.onrender.com',
-  schemes: ['http', 'https']
+  schemes: ['https']
 };
 
 const outputFile = './swagger-output.json';
