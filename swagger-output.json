@@ -11,26 +11,11 @@
     "http"
   ],
   "paths": {
-    "/": {
+    "/api-docs": {
       "get": {
         "description": "",
         "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/names": {
-      "get": {
-        "description": "",
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "responses": {}
       }
     },
     "/contacts/": {
@@ -39,7 +24,10 @@
         "parameters": [],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Get All Contacts",
+            "schema": {
+              "$ref": "#/definitions/Contacts"
+            }
           },
           "400": {
             "description": "Bad Request"
@@ -48,7 +36,16 @@
       },
       "post": {
         "description": "",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "contact",
+            "in": "body",
+            "description": "Create a new contact",
+            "schema": {
+              "$ref": "#/definitions/Contact"
+            }
+          }
+        ],
         "responses": {
           "201": {
             "description": "Created"
@@ -72,7 +69,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Get One Contact by ID",
+            "schema": {
+              "$ref": "#/definitions/Contact"
+            }
           },
           "400": {
             "description": "Bad Request"
@@ -87,11 +87,19 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "contact",
+            "in": "body",
+            "description": "Update a single contact",
+            "schema": {
+              "$ref": "#/definitions/Contact"
+            }
           }
         ],
         "responses": {
           "204": {
-            "description": "No Content"
+            "description": "Updated successfully"
           },
           "400": {
             "description": "Bad Request"
@@ -116,6 +124,75 @@
             "description": "Bad Request"
           }
         }
+      }
+    }
+  },
+  "definitions": {
+    "Contact": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "example": "Josh"
+        },
+        "lastName": {
+          "type": "string",
+          "example": "Allen"
+        },
+        "email": {
+          "type": "string",
+          "example": "joshallen@gmail.com"
+        },
+        "favoriteColor": {
+          "type": "string",
+          "example": "blue"
+        },
+        "birthday": {
+          "type": "string",
+          "example": "1995-05-22T07:00:00.000Z"
+        }
+      },
+      "required": [
+        "firstName",
+        "lastName",
+        "email",
+        "favoriteColor",
+        "birthday"
+      ]
+    },
+    "Contacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "example": "Josh"
+          },
+          "lastName": {
+            "type": "string",
+            "example": "Allen"
+          },
+          "email": {
+            "type": "string",
+            "example": "joshallen@gmail.com"
+          },
+          "favoriteColor": {
+            "type": "string",
+            "example": "blue"
+          },
+          "birthday": {
+            "type": "string",
+            "example": "1995-05-22T07:00:00.000Z"
+          }
+        },
+        "required": [
+          "firstName",
+          "lastName",
+          "email",
+          "favoriteColor",
+          "birthday"
+        ]
       }
     }
   }

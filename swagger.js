@@ -8,6 +8,22 @@ const doc = {
     title: 'My API',
     description: 'Description'
   },
+  definitions: {
+    Contact: {
+      $firstName: "Josh",
+      $lastName: "Allen",
+      $email: "joshallen@gmail.com",
+      $favoriteColor: "blue",
+      $birthday: "1995-05-22T07:00:00.000Z"
+    },
+    Contacts: [{
+      $firstName: "Josh",
+      $lastName: "Allen",
+      $email: "joshallen@gmail.com",
+      $favoriteColor: "blue",
+      $birthday: "1995-05-22T07:00:00.000Z"
+    }]
+  },
   host: 'localhost:' + port + '',
   schemes: ['http']
 };

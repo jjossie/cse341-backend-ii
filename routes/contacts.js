@@ -11,6 +11,10 @@ const {
 } = require('../controllers/contacts');
 
 routes.get('/', (req, res) => {
+/* #swagger.responses[200] = {
+    description: 'Get All Contacts',
+    schema: { $ref: '#/definitions/Contacts' }
+} */
   getAllContacts()
     .then((data) => {
       res.status(200).json(data);
@@ -21,6 +25,10 @@ routes.get('/', (req, res) => {
 });
 
 routes.get('/:contactId', (req, res) => {
+/* #swagger.responses[200] = {
+    description: 'Get One Contact by ID',
+    schema: { $ref: '#/definitions/Contact' }
+} */
   getContactById(req.params.contactId)
     .then((data) => {
       res.status(200).json(data);
@@ -31,6 +39,11 @@ routes.get('/:contactId', (req, res) => {
 });
 
 routes.post('/', (req, res) => {
+/* #swagger.parameters['contact'] = {
+    in: 'body',
+    description: 'Create a new contact',
+    schema: { $ref: '#/definitions/Contact' }
+} */
   const newContact = req.body;
   createContact(newContact)
     .then((id) => {
@@ -44,6 +57,14 @@ routes.post('/', (req, res) => {
 });
 
 routes.put('/:contactId', (req, res) => {
+/* #swagger.parameters['contact'] = {
+    in: 'body',
+    description: 'Update a single contact',
+    schema: { $ref: '#/definitions/Contact' }
+}
+   #swagger.responses[204] = {
+    description: 'Updated successfully'
+}*/
   const contactId = req.params.contactId;
   const updatedContact = req.body;
   if (updatedContact && contactId) {
